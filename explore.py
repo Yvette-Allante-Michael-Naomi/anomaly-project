@@ -52,6 +52,6 @@ def get_double_acess(df,keywords):
     data_keywords = keywords
     double_cross=pd.DataFrame()
     for i in data_keywords:
-        temp= webdev_students[df.path.str.contains(i)]
+        temp= df[df.path.str.contains(i)]
         double_cross = pd.concat([double_cross, temp], axis=0,ignore_index=True)
     return double_cross
