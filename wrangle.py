@@ -43,6 +43,8 @@ def get_clean_log_data():
 
     df = df[df.name != 'Staff']
     
+    # make the date the index for data frame
+
 
     df.to_csv('curriculum_logs_edited.csv', index=False)
     
